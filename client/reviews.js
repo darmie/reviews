@@ -1,3 +1,4 @@
+Meteor.subscribe("reviews");
 function gup(parameter) { 
   var loc = location.search.substring(1, location.search.length);
   var param_value = false;
@@ -21,7 +22,7 @@ var  title = gup('title');
 var  title = title.replace("%20"," ").replace("%20"," ").replace("%20"," ").replace("%20"," ").replace("%20"," ").replace("%20"," ").replace("%20"," ").replace("%20"," ").replace("%20"," ").replace("%20"," ").replace("%20"," ").replace("%20"," ");
 var  imgsrc = gup('imgsrc');
 // Templates
-Meteor.subscribe("reviews");
+
 Template.reviewList.reviews = function() {
   return Reviews.find();
 };
