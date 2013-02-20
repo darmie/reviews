@@ -6,7 +6,7 @@ Meteor.methods({
       if (!name) {
         name = 'Anonymous';
       }
-      Reviews.insert({name: name, review: review, title:title, imgsrc:imgsrc});
+      Reviews.insert({username: name, story: review, title:title, imgsrc:imgsrc});
       return true;
     }
     return false;
