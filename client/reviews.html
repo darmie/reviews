@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>
+        </title>
+		<link rel="stylesheet" href="Cinema8min.css" />
+        <link rel="stylesheet" href="jquerymobilestructure120min.css" />
+        
+       
+        <script src="jquerymin.js">
+        </script>
+		 <script src="jquerymobile120min.js">
+        </script>
+        <script src="my.js">
+        </script>
+        <!-- User-generated css -->
+        <style>
+		.ui-grid-a {
+			border-top: #bbb solid 1px;
+			}
+        </style>
+        <!-- User-generated js -->
+        <script>
+            try {
+
+    $(function() {
+
+    });
+
+  } catch (error) {
+    console.error("Your javascript has an error: " + error);
+  }
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+        <div data-role="page" id="page1">
+            <div data-theme="a" data-role="header">
+                <h3>
+                    {{> movietitle}}
+                </h3>
+            </div>
+            <div data-role="content">
+				{{> movieimage}} 
+                {{> field_set}}
+                
+                <div class="ui-grid-a">
+                    {{> reviewList}}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<template name="reviewList">
+<div class="ui-block-a">
+						{{#each reviews}}
+							{{> review}}
+						{{else}}
+						<h5>no posts</h5>
+						{{/each}}
+                    </div>
+</template>
+<template name="review">
+<h4>
+						
+							{{username}}:
+                        </h4>
+                    </div>
+                    <div class="ui-block-b">
+                        <h5>
+							
+                            {{story}}
+                        </h5>
+</template>
+<template name="field_set">
+<div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup" data-mini="true">
+                        <label for="textinput1">
+                        </label>
+                        <input name="username" id="textinput1" placeholder="Name" value="" type="text" />
+                    </fieldset>
+                </div>
+               
+                <div data-role="fieldcontain">
+                    <fieldset data-role="controlgroup">
+                        <label for="textarea1">
+                        </label>
+                        <textarea name="reviews" id="textarea1" placeholder="Your Review">
+                        </textarea>
+                    </fieldset>
+                </div>
+				<input type="submit" data-inline="true" data-theme="a" value="Submit" data-mini="true" />
+</template>
+<template name="movietitle">
+	{{title}}
+</template>
+<template name="movieimage">
+	<img src="{{imgsrc}}" width="106px" height="156px"/>
+</template>
