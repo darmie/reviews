@@ -39,7 +39,7 @@ Template.movieimage.imgsrc = function(){
 Template.field_set.events = {
  'click input.submit':function() {
  	var a_name = $('input#textinput1').val();
-	var a_review = document.getElementById("textarea1").value;
+	var a_review = document.getElementById('textarea1').value;
 	var img = imgsrc;
 	var movietitle = title;
 	Session.set("username", a_name);
