@@ -1,3 +1,4 @@
+Reviews= new Meteor.Collection("reviews");
 Meteor.autorun(function () {
 	Meteor.subscribe("reviews");
 });
