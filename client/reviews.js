@@ -40,16 +40,10 @@ Template.field_set.events = {
 	var a_review = $('input#textarea1').val();
 	var img = imgsrc;
 	var movietitle = title;
-	Meteor.Call('review', a_name , a_review, movietitle, img, 
-	function(error, result){
-		if(!result){
-			$('input#textinput1').attr('placeholder', 'please enter your name...');
-			$('input#textarea1').attr('placeholder', 'please enter a review about this movie...');
-		}
-		else if (!error) {
-          $('input#textinput1').val('');
-          $('input#textarea1').attr('placeholder', 'review');
-        }
-	});
+	Session.set("username", a_name);
+	Session.set("story", a_review);
+	Session.set("title", movietitle);
+	Session.set("imgsrc", img);
+
  }
 } 
