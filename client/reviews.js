@@ -36,7 +36,7 @@ var a_name = $('input#textinput1').val();
 var a_review = $('input#textarea1').val();
 // function to submit form
 Template.field_set.events = {
- 'click.input.submit':function() {
+ 'click input.submit':function() {
 	Meteor.Call('review', a_name , a_review, title, imgsrc, 
 	function(error, result){
 		if(!result){
