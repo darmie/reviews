@@ -3,6 +3,5 @@ Meteor.startup(function () {
   if(Reviews.find().count() === 0) {
    
     Reviews.insert({username: "darmie", story: "Cool movie", title:"null", imgsrc:"null"});
-     Reviews.insert({username: Session.get("username"), story: Session.get("story"), title: Session.get("title"), imgsrc: Session.get("imgsrc")});
   }
 });
