@@ -46,26 +46,21 @@
         </div>
     </body>
 <template name="reviewList">
-<div class="ui-block-a">
-						{{#each reviews}}
-							{{> review}}
-						{{else}}
-						<h5>no posts</h5>
-						{{/each}}
-                    </div>
+
+{{#each reviews}}
+	{{> review}}
+	{{else}}
+	<h5>no posts</h5>
+	{{/each}}
+
 </template>
 <template name="review">
-<h4>
-						
-							{{username}}:
-                        </h4>
-                    </div>
-                    <div class="ui-block-b">
-                        <h5>
-							
-                            {{story}}
-                        </h5>
-                     </div>
+<div class="ui-block-a">
+	<h4>{{username}}:</h4>
+</div>
+<div class="ui-block-b">
+  <h5>{{story}}</h5>
+</div>
 </template>
 <template name="field_set">
 <div class="field_set"></div>
