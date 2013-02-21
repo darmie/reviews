@@ -1,4 +1,3 @@
-
 function gup(parameter) { 
   var loc = location.search.substring(1, location.search.length);
   var param_value = false;
@@ -24,7 +23,7 @@ var  imgsrc = gup('imgsrc');
 // Templates
 
 Meteor.subscribe("reviews");
-Reviews = new Meteor.Collection("reviews");
+
 
 Template.reviewList.reviews = function() {
   return Reviews.find();
