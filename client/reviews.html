@@ -39,9 +39,9 @@
 				{{> movieimage}} 
                 {{> field_set}}
                 
-                <div class="ui-grid-a">
+                
                     {{> reviewList}}
-                </div>
+                
             </div>
         </div>
     </body>
@@ -55,11 +55,13 @@
 
 </template>
 <template name="review">
+<div class="ui-grid-a">
 <div class="ui-block-a">
 	<h4>{{username}}:</h4>
 </div>
 <div class="ui-block-b">
   <h5>{{story}}</h5>
+</div>
 </div>
 </template>
 <template name="field_set">
