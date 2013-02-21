@@ -43,7 +43,6 @@ Template.field_set.events = {
 		}
 		else if (!error) {
           $('input#textinput1').val('');
-          $('input#textarea1').val('');
           $('input#textarea1').attr('placeholder', 'review');
         }
 	});

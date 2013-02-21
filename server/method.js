@@ -1,12 +1,12 @@
 //method to post the reviews
 
 Meteor.methods({
-  review: function (name, review, title, imgsrc) {
-    if (review) {
+  review: function (name, a_review, title, imgsrc) {
+    if (a_review) {
       if (!name) {
         name = 'Anonymous';
       }
-      Reviews.insert({username: name, story: review, title:title, imgsrc:imgsrc});
+      Reviews.insert({username: name, story: a_review, title:title, imgsrc:imgsrc});
       return true;
     }
     return false;
