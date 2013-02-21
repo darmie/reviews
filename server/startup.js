@@ -1,5 +1,5 @@
 // let's put something in our database if it's empty
-Reviews= new Meteor.Collection("reviews");
+
 Meteor.startup(function () {
   if(Reviews.find().count() === 0) {
    
