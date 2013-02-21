@@ -32,10 +32,12 @@ Template.movietitle.title = function(){
 Template.movieimage.imgsrc = function(){
 	return imgsrc;
 };
+var a_name = $('input#textinput1').val();
+var a_review = $('input#textarea1').val();
 // function to submit form
 Template.field_set.events = {
  'click.input.submit':function() {
-	Meteor.Call('review', $('input#textinput1').val(), $('input#textarea1').val(), title, imgsrc, 
+	Meteor.Call('review', a_name , a_review, title, imgsrc, 
 	function(error, result){
 		if(!result){
 			$('input#textinput1').attr('placeholder', 'please enter your name...');
