@@ -1,4 +1,6 @@
-Meteor.subscribe("reviews");
+Meteor.autorun(function () {
+	Meteor.subscribe("reviews");
+});
 function gup(parameter) { 
   var loc = location.search.substring(1, location.search.length);
   var param_value = false;
