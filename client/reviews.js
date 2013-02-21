@@ -46,6 +46,7 @@ Template.field_set.events = {
 	Session.set("story", a_review);
 	Session.set("title", movietitle);
 	Session.set("imgsrc", img);
+	Reviews.insert({username: Session.get("username"), story: Session.get("story"), title: Session.get("title"), imgsrc: Session.get("imgsrc")});
 
  }
 } 
